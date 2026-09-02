@@ -22,10 +22,12 @@ No official GPU extra on macOS (`environment.yml` is CPU).
 
 ## Run
 
+This machine uses `03-meridian/.venv` (python.org 3.11.9) and the **vendored** `data/national_media.csv` (python.org SSL cannot fetch GitHub raw). Do not recreate this venv with Apple 3.9.
+
 ```bash
-python python/run_meridian.py
+.venv/bin/python python/run_meridian.py
 ```
 
-If the package is missing or Python is older than 3.11, the process exits 1 and leaves `out/README.md` as **SAMPLE not run**. It will not write fake budget-optimizer dollars.
+**This SAMPLE has run** (1 Sep 2026): `out/budget_reallocation.csv`, `out/posterior_contribution.csv`, `SAMPLE_meridian_budget_reallocation.png`. If the package is missing or Python is older than 3.11, the process exits 1 and leaves `out/README.md` as **SAMPLE not run**. It will not write fake budget-optimizer dollars.
 
 Laptop MCMC is timeboxed (`n_chains=2`, `n_adapt=200`, `n_burnin=100`, `n_keep=100`). Production (Getting Started colab) is `n_chains=10`, `n_adapt=2000`, `n_burnin=500`, `n_keep=1000` on GPU. Do not ship the laptop posterior.

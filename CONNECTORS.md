@@ -37,11 +37,11 @@ cd 01-geolift && Rscript R/run_geolift.R
 export RETICULATE_PYTHON="$HOME/.virtualenvs/r-reticulate/bin/python"
 cd ../02-robyn && Rscript R/run_robyn.R
 
-# Meridian (timeboxed MCMC). Force 3.11 venv.
+# Meridian (timeboxed MCMC). Force 3.11 venv. Vendored CSV (SSL blocked GitHub raw).
 cd ../03-meridian && .venv/bin/python python/run_meridian.py
 ```
 
-If Recast books a screen, **stop after GeoLift and apply**. Robyn/Meridian are not a reason to sit on Greenhouse.
+GeoLift ATT, Robyn Allocator, and Meridian posterior **have run** on this machine (1 Sep 2026). If Recast books a screen, **stop after GeoLift and apply**. Robyn/Meridian are not a reason to sit on Greenhouse.
 
 ## Re-install (only if a machine is wiped)
 

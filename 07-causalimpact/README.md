@@ -12,11 +12,13 @@ If you move the intervention date after looking, a “lift” can appear anyway.
 
 Saturation (Hill) is an MMM curve assumption. It is not this time-series intervention.
 
-Python here is a transparent pre-period regression. It is **not** Brodersen. Named library: R `CausalImpact` once R exists (`R/run_causalimpact.R`).
+Python here is a transparent pre-period regression. It is **not** Brodersen. Named library: R `CausalImpact` **has run** (`R/run_causalimpact.R`): good design recovers **~11.2%** vs known +12%, p≈0.001; moved date still fakes lift.
+
+Saturation Hill from Robyn: `02-robyn/out/SAMPLE_robyn_saturation_facebook_I.png`. Saturation is an MMM assumption; CausalImpact is a time-series intervention.
 
 ```bash
-# from this folder; Python 3.9.6; repo .venv
+# from this folder
 ../.venv/bin/python python/failure_case.py
 ../.venv/bin/python python/saturation_hill.py
-# when R exists: Rscript R/run_causalimpact.R
+Rscript R/run_causalimpact.R
 ```

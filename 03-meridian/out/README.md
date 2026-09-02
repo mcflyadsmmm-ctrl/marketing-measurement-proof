@@ -1,7 +1,9 @@
-# SAMPLE: Meridian not run
+# SAMPLE: Meridian run notes
 
-SAMPLE not run. Data load or MCMC failed (URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>). No posterior artifacts.
+Official national paid-media CSV (`national_media.csv`). Laptop MCMC: n_chains=2, n_adapt=200, n_burnin=100, n_keep=100. Production Getting Started: n_chains=10, n_adapt=2000, n_burnin=500, n_keep=1000.
 
-No posterior contribution, saturation, or budget reallocation numbers were written. Do not invent optimizer dollars.
+Artifacts: posterior_contribution.csv, saturation_response_curves.csv, SAMPLE contribution charts, SAMPLE saturation charts, SAMPLE_summary_output.html, budget_reallocation.csv, SAMPLE_meridian_budget_reallocation.png, SAMPLE_optimization_output.html.
 
-Decision rule: [`decision.md`](decision.md).
+Not McFly client Meridian. Not Black Clover / Nutricost ROI.
+
+Decision: [`decision.md`](decision.md).

@@ -11,7 +11,7 @@ R **4.6.1** is on this Mac. `Rscript R/run_robyn.R` still needs the Robyn packag
 - Data: package `dt_simulated_weekly` (demo window `2016-01-01`–`2018-12-31`).
 - OnePager, response / saturation (`robyn_response` + Hill), Allocator **current vs recommended** (`scenario = "max_response"`, `date_range = "last_10"`).
 - Holdout: last **10** weeks of that window. MAPE in `out/holdout_mape.txt`. Nevergrad is **timeboxed** (200 iterations × 1 trial). Production (official `demo.R`) is **2000 iterations × 5 trials**. Do not treat the laptop Pareto as a shipped model.
-- Allocator dollars are written only if `robyn_allocator()` finishes. This folder will not invent them.
+- Allocator **did run** (`out/allocator_current_vs_recommended.csv`, `SAMPLE_robyn_allocator.png`). Cuts OOH 30%; scales facebook_I and print to the 1.5× cap. Laptop mix, not production. This folder will not invent dollars if Allocator fails.
 
 ## Install
 
