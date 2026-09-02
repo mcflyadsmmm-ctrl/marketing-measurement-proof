@@ -1,0 +1,2 @@
+"path","locations","treatment_start","treatment_end","att","percent_lift","pvalue","incremental","known_inject","collapsed"
+"n1_milwaukee_inject","milwaukee",87,90,522.49467998206,10.5,0.002,2089.97871992824,0.08,FALSE

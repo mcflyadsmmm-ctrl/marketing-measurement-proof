@@ -12,7 +12,7 @@ cd ../01-geolift && Rscript R/run_geolift.R     # GeoLift 2.7.5; target < 20 min
 
 **00 has run.** Outputs: `out/CMO-memo.md`, `priors.md`, `experiment.md`.
 
-**01 has run.** Milwaukee / Orlando / Saint Paul. Injected +8% cash sales. Recovered **+9.8%**, ATT 1192, p=0.034. 90% CI covers 8% and is wide. Three cities were summed into one cell because augsynth 0.2.0 crashes on N>1. That ATT is a **method check** on package data. It is not the Amazon pause designed in `00-recast-r-memo/out/experiment.md`.
+**01 has run.** Milwaukee / Orlando / Saint Paul. Injected +8% cash sales. Recovered **+9.8%**, ATT 1192, p=0.034. 90% CI covers 8% and is wide. Three cities were summed into one cell because augsynth 0.2.0 crashes on N>1 (official chicago+portland walkthrough also crashes). N=1 Milwaukee inject runs without collapse (+10.5%, p=0.002) — method check, not the interview cell. That ATT is a **method check** on package data. It is not the Amazon pause designed in `00-recast-r-memo/out/experiment.md`.
 
 Cursor ran the libraries on this Mac. The CMO freeze/scale rules and `03-meridian/out/decision.md` pick are the work product.
 

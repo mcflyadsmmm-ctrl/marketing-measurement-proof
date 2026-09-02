@@ -44,6 +44,8 @@ Does **not** score the vignette’s baked-in Chicago/Portland 15-day campaign on
 
 Does **not** pause Amazon on the Recast OLS CSV. That design lives in `../00-recast-r-memo/out/experiment.md`. This folder is the GeoLift **method** (known-lift recovery). Recast’s loop is priors → interpret → validate; the live validate would be a geo panel for the freeze channel, not this vignette.
 
+**Documented API check** (`R/run_documented.R`): Meta’s walkthrough `chicago` + `portland` on periods 91–105 **crashes** on augsynth 0.2.0 (`Yobs` 210 vs T=105). Do not invent that ATT. N=1 Milwaukee +8% inject **runs** without collapse (ATT 522, +10.5%, p=0.002). Interview ATT remains the collapsed three-city cell in `att.csv`.
+
 GitHub Actions CI covers `00-recast-r-memo` only. GeoLift is too heavy for the runner.
 
 ## Interview

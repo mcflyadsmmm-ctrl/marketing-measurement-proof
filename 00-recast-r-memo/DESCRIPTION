@@ -1,0 +1,16 @@
+Package: recastsample
+Title: SAMPLE Recast-style R memo (not Recast the product)
+Version: 0.0.1
+Authors@R: person("Marty", "Smithson", role = c("aut", "cre"))
+Description: Public SAMPLE OLS plus geometric adstock. Not client data.
+License: MIT
+Imports:
+    broom,
+    ggplot2,
+    lubridate,
+    readr,
+    tibble,
+    dplyr,
+    tidyr
+Encoding: UTF-8
+Language: en-US
