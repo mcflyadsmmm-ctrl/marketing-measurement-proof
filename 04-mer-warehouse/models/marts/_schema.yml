@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: fct_daily_mer
+    description: Cash MER by day and paid channel. company_mer is the finance KPI vs break-even.
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: channel
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Google", "Meta", "TikTok", "Microsoft"]
+      - name: spend
+        tests:
+          - not_null
+      - name: net_cash
+        tests:
+          - not_null
+      - name: company_mer
+        tests:
+          - not_null
+      - name: break_even_mer
+        tests:
+          - not_null
+
+  - name: fct_channel_claimed_vs_cash
+    description: Platform-reported conversions x AOV (and email last-click) vs net_cash. Channels double-count.
+    columns:
+      - name: channel
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Google", "Meta", "TikTok", "Microsoft", "Email"]
+      - name: claimed_revenue
+        tests:
+          - not_null
+      - name: company_net_cash
+        tests:
+          - not_null
+      - name: stack_claimed_to_cash_ratio
+        tests:
+          - not_null
+
+  - name: dim_metric_dictionary
+    description: One row per KPI with an English definition.
+    columns:
+      - name: kpi_name
+        tests:
+          - not_null
+          - unique
+      - name: definition
+        tests:
+          - not_null
+      - name: distrust_note
+        tests:
+          - not_null

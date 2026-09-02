@@ -1,0 +1,6 @@
+channel,spend,platform_reported_conversions,aov,claimed_revenue,last_click_net_cash,company_net_cash,claimed_minus_last_click_cash,claimed_share_of_company_cash,total_claimed_revenue,stack_claimed_to_cash_ratio,break_even_mer
+Meta,416173.51,3043.0,68.0,206924.0,101974.99,328261.26,104949.01,0.6304,637650.44,1.9425,2.5
+Google,346546.58,2938.0,68.0,199784.0,87166.49,328261.26,112617.51,0.6086,637650.44,1.9425,2.5
+TikTok,147848.47,1340.0,68.0,91120.0,30651.02,328261.26,60468.98,0.2776,637650.44,1.9425,2.5
+Email,0.0,,68.0,89638.44,47888.39,328261.26,41750.05,0.2731,637650.44,1.9425,2.5
+Microsoft,74324.31,738.0,68.0,50184.0,16994.02,328261.26,33189.98,0.1529,637650.44,1.9425,2.5

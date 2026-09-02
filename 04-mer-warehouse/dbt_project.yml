@@ -1,0 +1,56 @@
+name: mer_warehouse
+version: "1.0.0"
+config-version: 2
+profile: mer_warehouse
+
+model-paths: ["models"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages", "logs"]
+
+flags:
+  send_anonymous_usage_stats: false
+
+models:
+  mer_warehouse:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  mer_warehouse:
+    +quote_columns: false
+    ads_spend_daily:
+      +column_types:
+        date: date
+        channel: varchar
+        spend: double
+        platform_reported_conversions: integer
+    orders:
+      +column_types:
+        order_id: varchar
+        order_date: date
+        gross: double
+        returns: double
+        net_cash: double
+        last_click_channel: varchar
+    sessions:
+      +column_types:
+        date: date
+        sessions: integer
+        converting_sessions: integer
+    email_sends:
+      +column_types:
+        date: date
+        sends: integer
+        clicks: integer
+        attributed_revenue: double
+    assumptions:
+      +column_types:
+        assumption_key: varchar
+        assumption_value: double
+        unit: varchar
+        notes: varchar

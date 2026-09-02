@@ -1,0 +1,84 @@
+version: 2
+
+seeds:
+  - name: ads_spend_daily
+    description: SAMPLE paid spend and platform-reported conversions by date x channel.
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: channel
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Google", "Meta", "TikTok", "Microsoft"]
+      - name: spend
+        tests:
+          - not_null
+      - name: platform_reported_conversions
+        tests:
+          - not_null
+
+  - name: orders
+    description: SAMPLE orders. net_cash = gross minus returns.
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: order_date
+        tests:
+          - not_null
+      - name: gross
+        tests:
+          - not_null
+      - name: returns
+        tests:
+          - not_null
+      - name: net_cash
+        tests:
+          - not_null
+      - name: last_click_channel
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Google", "Meta", "TikTok", "Microsoft", "Email", "Direct"]
+
+  - name: sessions
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: sessions
+        tests:
+          - not_null
+      - name: converting_sessions
+        tests:
+          - not_null
+
+  - name: email_sends
+    description: SAMPLE Klaviyo-shaped sends. attributed_revenue is last-click and should be distrusted.
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: sends
+        tests:
+          - not_null
+      - name: clicks
+        tests:
+          - not_null
+      - name: attributed_revenue
+        tests:
+          - not_null
+
+  - name: assumptions
+    description: SAMPLE contribution margin and break-even MER. Not W-2.
+    columns:
+      - name: assumption_key
+        tests:
+          - not_null
+          - unique
+      - name: assumption_value
+        tests:
+          - not_null

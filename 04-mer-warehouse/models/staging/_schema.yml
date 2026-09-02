@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_ads_spend
+    columns:
+      - name: date
+        tests:
+          - not_null
+      - name: channel
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Google", "Meta", "TikTok", "Microsoft"]
+      - name: spend
+        tests:
+          - not_null
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: net_cash
+        tests:
+          - not_null
+      - name: gross
+        tests:
+          - not_null
+      - name: last_click_channel
+        tests:
+          - accepted_values:
+              values: ["Google", "Meta", "TikTok", "Microsoft", "Email", "Direct"]

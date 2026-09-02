@@ -1,0 +1,17 @@
+SAMPLE. POV for a Haus Measurement Specialist screen: how an MMM-first incrementality roadmap differs from a GeoLift-first one. Not client data. Not a Recast take-home. No W-2 numbers.
+
+Two roadmaps, same synthetic-control math, different order. The order is the job.
+
+GeoLift-first is what you run when the mix is not identified. Two platforms claim the same cash sale. The MMM is not standing, or finance will not fund a curve they do not trust. You pick the disputed, geo-assignable tactic. You hold out markets. You read ATT on cash sales. Then you plan: scale, cut, or leave it in the unidentified bucket. The test is the plan. The calendar is built around the holdout. That is the right move when you cannot yet name the cell.
+
+MMM-first — Haus cMMM — is the opposite order, on purpose. You specify the model first: which cells have their own response curve. Experiment results are ground truth that **anchor** those curves. They are not a later calibration you bolt on after the model is “done.” The ATT pins the height of the curve for that cell. Saturation and lag still come from the MMM. The experiment decides whether the curve is allowed to spend.
+
+Grain is the whole argument. If the MMM splits Meta ASC from Meta prospecting, you do not geo-test “Meta all-up.” An all-up ATT is a weighted mash of two curves. You cannot say which cell earned the cash, so you cannot anchor either one. You refuse that design in a client working session. Test the cell you will actually move: an ASC holdout or a prospecting holdout, same KPI the model uses (cash sales, not platform ROAS). If you cannot geo-target at that grain, you do not pretend the parent test identifies the child. You say the child is unidentified and you do not let the cMMM spend it like it was measured.
+
+National TV, always-on brand you will not pause, and leaky digital (control still sees the ad) are not GeoLift cells. Say so. MTA is not incrementality; it never held out spend. A last-click report agreeing with the MMM is not an anchor. It is two observational stories shaking hands.
+
+Recast’s “validate the model” is the opposite sequencing. Fit first, then run geos to see if the MMM was right. That treats the experiment as a unit test on a finished object. Haus sequencing treats the experiment as the prior the response curve is not allowed to wander away from. I would say that out loud on a Haus screen: I will not sell a geo as a post-hoc stamp on an MMM I already presented to finance. I will spec the cells, run the tests that can actually pin those cells, then let the cMMM spend against the anchored curves.
+
+What I would cut: an all-up platform test when the model is tactic-split; a two-week national-brand pause that never happens; a holdout in a hub city that commutes into control; stuffing a noisy four-day ATT into the curve because someone needed a slide. What I would scale: a cell-level geo whose ATT confidence interval sits on the MMM curve and whose cash MER still clears. What I would rerun: an underpowered window that was never going to see a 5% MDE — lengthen the test or raise spend. Do not “validate” a noisy ATT into the model.
+
+The SAMPLE in this folder is GeoLift-first on purpose: pick markets, inject a known +8% on cash sales, read whether the CI recovers it. That is the interview story for “name one geo test.” The Haus story is the memo you are reading: the same test, run at the cell the MMM actually spends, used as ground truth that anchors the curve — not as a later calibration, and not as Recast-style model validation.

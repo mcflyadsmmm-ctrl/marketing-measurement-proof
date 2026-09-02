@@ -1,0 +1,9 @@
+# Project-local DuckDB target. Not ~/.dbt. No Snowflake.
+mer_warehouse:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: mer_warehouse.duckdb
+      threads: 4
+      schema: main

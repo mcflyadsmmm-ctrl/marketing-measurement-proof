@@ -1,0 +1,19 @@
+# SAMPLE: Google Meridian env pin
+# Official: https://github.com/google/meridian
+# Docs: Python 3.11 or 3.12 required (README also lists 3.11–3.13).
+# This Mac’s system Python is 3.9.6 — google-meridian will not install there.
+# macOS: CPU only (Google: no official GPU support on macOS).
+name: meridian-sample
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      # PyPI package name. Pins the 1.x line used in Google’s Getting Started colab
+      # (1.7.x observed 2026) without crossing a major version.
+      - google-meridian>=1.7.0,<2
+      - pandas>=2.2.2,<3
+      - matplotlib>=3.8,<3.11
+      - numpy>=2.0.2,<2.4.0
+      - altair>=5

@@ -1,0 +1,4 @@
+assumption_key,assumption_value,unit,notes
+contribution_margin,0.4,share,"SAMPLE contribution margin used only to set break-even MER. Not a W-2 figure."
+break_even_mer,2.5,ratio,"SAMPLE break-even MER = 1 / contribution_margin. Cash MER at or above this covers media after contribution."
+aov,68.0,usd,"SAMPLE blended AOV used to turn platform-reported conversions into claimed revenue."

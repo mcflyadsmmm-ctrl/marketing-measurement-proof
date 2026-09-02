@@ -1,0 +1,201 @@
+ticket_id,date,channel,text,theme
+T0200,2024-01-02,sms,SAMPLE: Need to change the ship-to address on an unfulfilled order.,other
+T0120,2025-11-02,survey,SAMPLE: Color is much lighter than the site; dye looks faded already.,product
+T0187,2024-05-13,social,"SAMPLE: Press request for a loft photoshoot, not an order issue.",other
+T0028,2025-08-19,survey,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0058,2025-08-03,cx_ticket,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0146,2024-04-14,survey,SAMPLE: Retargeting ad kept firing after I already bought.,ads
+T0162,2025-06-17,sms,SAMPLE: The ad was misleading — hero image is not the SKU in stock.,ads
+T0170,2025-12-03,sms,SAMPLE: TikTok advertisement promised a gift with purchase that did not apply.,ads
+T0024,2025-07-29,survey,SAMPLE: Delivery was four days past the estimated arrival and I missed the event.,shipping
+T0192,2025-04-19,chat,"SAMPLE: Press request for a loft photoshoot, not an order issue.",other
+T0131,2024-01-16,chat,SAMPLE: Sizing is off — it is smaller than the dimensions listed.,product
+T0029,2025-08-08,chat,SAMPLE: Delivery was four days past the estimated arrival and I missed the event.,shipping
+T0043,2025-07-22,cx_ticket,"SAMPLE: Late for a housewarming — shipping said 3–5 days, we are on day 11.",shipping
+T0178,2025-01-28,cx_ticket,SAMPLE: Please add a gift message before this ships.,other
+T0155,2024-04-12,cx_ticket,SAMPLE: TikTok advertisement promised a gift with purchase that did not apply.,ads
+T0165,2024-10-03,cx_ticket,SAMPLE: Clicked the ad from TikTok; landing page was a different colorway.,ads
+T0109,2024-01-07,cx_ticket,SAMPLE: Pilling on the edge after one week of use.,product
+T0116,2025-06-03,cx_ticket,SAMPLE: Pilling on the edge after one week of use.,product
+T0088,2025-09-16,sms,SAMPLE: Carrier scan stopped after the warehouse; still waiting on the package.,shipping
+T0090,2025-05-19,cx_ticket,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0096,2025-01-19,sms,SAMPLE: Corner stitching opened after two washes.,product
+T0093,2025-06-03,cx_ticket,SAMPLE: Sizing is off — it is smaller than the dimensions listed.,product
+T0071,2025-12-21,cx_ticket,SAMPLE: Backorder notice came after purchase; can you expedite fulfillment?,shipping
+T0036,2025-08-01,social,SAMPLE: Backorder notice came after purchase; can you expedite fulfillment?,shipping
+T0144,2025-04-16,social,"SAMPLE: Saw the ad on Instagram, but the bundle was already gone.",ads
+T0042,2025-08-20,cx_ticket,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0105,2024-09-07,social,SAMPLE: Sheds lint on the couch; shedding started after the first wash.,product
+T0176,2025-05-10,cx_ticket,SAMPLE: Wedding registry question: can guests pick a SKU?,other
+T0006,2025-12-04,survey,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0164,2025-12-04,sms,SAMPLE: Clicked the ad from TikTok; landing page was a different colorway.,ads
+T0182,2024-03-21,cx_ticket,SAMPLE: Password reset on the account is looping; cannot log in.,other
+T0003,2024-11-24,social,"SAMPLE: Late for a housewarming — shipping said 3–5 days, we are on day 11.",shipping
+T0118,2025-06-19,survey,SAMPLE: Wash instructions followed; fabric still looks worn.,product
+T0069,2025-04-18,social,"SAMPLE: FedEx delivery exception, box has not shown up, ticket opened again.",shipping
+T0141,2025-11-23,cx_ticket,"SAMPLE: Saw the ad on Instagram, but the bundle was already gone.",ads
+T0102,2025-09-21,social,SAMPLE: Corner stitching opened after two washes.,product
+T0012,2024-12-02,cx_ticket,SAMPLE: Delivery was four days past the estimated arrival and I missed the event.,shipping
+T0089,2024-02-05,cx_ticket,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0121,2025-02-06,social,SAMPLE: Corner stitching opened after two washes.,product
+T0197,2024-12-03,sms,SAMPLE: Password reset on the account is looping; cannot log in.,other
+T0077,2025-02-25,survey,SAMPLE: Package marked delivered but nothing on the porch. Lost?,shipping
+T0035,2025-08-11,chat,"SAMPLE: FedEx delivery exception, box has not shown up, ticket opened again.",shipping
+T0002,2024-12-03,survey,"SAMPLE: FedEx delivery exception, box has not shown up, ticket opened again.",shipping
+T0041,2025-07-09,social,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0152,2025-03-12,chat,SAMPLE: Facebook advertisement showed a price that was not on the PDP.,ads
+T0112,2025-02-14,sms,SAMPLE: Smell out of the bag has not gone away after airing out.,product
+T0019,2025-07-21,chat,SAMPLE: Carrier scan stopped after the warehouse; still waiting on the package.,shipping
+T0009,2024-11-23,chat,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0061,2025-04-27,cx_ticket,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0094,2024-07-02,cx_ticket,SAMPLE: Wash instructions followed; fabric still looks worn.,product
+T0108,2024-04-25,social,SAMPLE: Color is much lighter than the site; dye looks faded already.,product
+T0110,2024-02-07,social,SAMPLE: Pilling on the edge after one week of use.,product
+T0027,2025-08-14,social,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0032,2025-07-16,survey,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0163,2024-12-23,sms,SAMPLE: TikTok advertisement promised a gift with purchase that did not apply.,ads
+T0098,2024-06-24,social,SAMPLE: Color is much lighter than the site; dye looks faded already.,product
+T0138,2024-06-19,sms,SAMPLE: Fabric feels thinner than the product page photos.,product
+T0054,2025-07-25,social,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0160,2024-07-10,survey,"SAMPLE: Saw the ad on Instagram, but the bundle was already gone.",ads
+T0190,2025-09-07,cx_ticket,SAMPLE: Can you resend the invoice for our records?,other
+T0050,2025-08-13,sms,SAMPLE: UPS says delayed; the blanket was supposed to arrive last Friday.,shipping
+T0145,2025-11-27,cx_ticket,"SAMPLE: Saw the ad on Instagram, but the bundle was already gone.",ads
+T0111,2024-10-16,cx_ticket,SAMPLE: Sheds lint on the couch; shedding started after the first wash.,product
+T0124,2025-12-23,sms,SAMPLE: Corner stitching opened after two washes.,product
+T0073,2025-08-31,survey,SAMPLE: Tracking has not moved in six days; package still shows in transit.,shipping
+T0005,2024-11-25,survey,SAMPLE: Tracking has not moved in six days; package still shows in transit.,shipping
+T0167,2025-06-10,chat,SAMPLE: Facebook advertisement showed a price that was not on the PDP.,ads
+T0125,2024-01-14,survey,SAMPLE: Corner stitching opened after two washes.,product
+T0106,2024-03-26,survey,SAMPLE: Smell out of the bag has not gone away after airing out.,product
+T0026,2025-07-19,cx_ticket,SAMPLE: Package marked delivered but nothing on the porch. Lost?,shipping
+T0184,2025-05-29,survey,SAMPLE: Password reset on the account is looping; cannot log in.,other
+T0142,2025-11-29,survey,SAMPLE: Discount code from the Meta ad returned invalid.,ads
+T0136,2025-03-26,cx_ticket,SAMPLE: Sizing is off — it is smaller than the dimensions listed.,product
+T0104,2025-09-01,survey,SAMPLE: Seam on the binding is tearing. Quality issue.,product
+T0044,2025-07-14,cx_ticket,SAMPLE: Carrier scan stopped after the warehouse; still waiting on the package.,shipping
+T0052,2025-08-02,cx_ticket,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0082,2024-01-25,survey,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0168,2024-02-09,cx_ticket,SAMPLE: Instagram ad used a promo code that was expired at checkout.,ads
+T0087,2024-04-08,social,SAMPLE: Tracking has not moved in six days; package still shows in transit.,shipping
+T0079,2024-08-05,social,SAMPLE: Order is in a fulfillment backlog and the ship date slipped twice.,shipping
+T0117,2025-11-12,survey,SAMPLE: Sheds lint on the couch; shedding started after the first wash.,product
+T0008,2025-12-04,social,SAMPLE: Carrier scan stopped after the warehouse; still waiting on the package.,shipping
+T0018,2025-07-10,social,SAMPLE: Tracking has not moved in six days; package still shows in transit.,shipping
+T0086,2024-11-14,sms,SAMPLE: Package marked delivered but nothing on the porch. Lost?,shipping
+T0139,2024-10-10,social,SAMPLE: Color is much lighter than the site; dye looks faded already.,product
+T0046,2025-08-24,survey,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0055,2025-07-21,survey,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0179,2024-12-03,social,SAMPLE: Need to change the ship-to address on an unfulfilled order.,other
+T0062,2024-10-14,cx_ticket,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0057,2025-03-02,cx_ticket,"SAMPLE: FedEx delivery exception, box has not shown up, ticket opened again.",shipping
+T0156,2025-11-25,cx_ticket,SAMPLE: Discount code from the Meta ad returned invalid.,ads
+T0114,2025-10-20,chat,SAMPLE: Sizing is off — it is smaller than the dimensions listed.,product
+T0085,2025-10-09,social,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0195,2024-02-15,chat,SAMPLE: Need to change the ship-to address on an unfulfilled order.,other
+T0075,2024-05-04,survey,SAMPLE: Package marked delivered but nothing on the porch. Lost?,shipping
+T0147,2025-04-17,social,SAMPLE: Facebook advertisement showed a price that was not on the PDP.,ads
+T0188,2025-03-10,survey,"SAMPLE: Want to update the email on the account, nothing wrong with the order.",other
+T0154,2025-04-09,chat,SAMPLE: Facebook advertisement showed a price that was not on the PDP.,ads
+T0101,2024-08-30,social,SAMPLE: Smell out of the bag has not gone away after airing out.,product
+T0169,2024-03-06,survey,SAMPLE: Instagram ad used a promo code that was expired at checkout.,ads
+T0107,2024-05-27,chat,SAMPLE: Wash instructions followed; fabric still looks worn.,product
+T0171,2024-03-16,sms,"SAMPLE: Wholesale inquiry — we run a small shop, not a complaint.",other
+T0095,2025-09-29,cx_ticket,SAMPLE: Fabric feels thinner than the product page photos.,product
+T0048,2025-07-23,social,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0045,2025-07-30,sms,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0166,2025-02-21,cx_ticket,SAMPLE: The ad was misleading — hero image is not the SKU in stock.,ads
+T0078,2025-03-28,survey,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0037,2025-08-16,chat,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0004,2025-12-07,cx_ticket,SAMPLE: Tracking has not moved in six days; package still shows in transit.,shipping
+T0181,2024-05-15,cx_ticket,SAMPLE: Password reset on the account is looping; cannot log in.,other
+T0198,2024-04-11,social,SAMPLE: Can you resend the invoice for our records?,other
+T0016,2025-07-22,sms,SAMPLE: Delivery was four days past the estimated arrival and I missed the event.,shipping
+T0133,2025-03-10,chat,SAMPLE: Corner stitching opened after two washes.,product
+T0033,2025-07-31,sms,SAMPLE: Package marked delivered but nothing on the porch. Lost?,shipping
+T0013,2025-07-27,social,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0001,2024-11-22,social,SAMPLE: Never arrived. Last scan was in transit two weeks ago.,shipping
+T0060,2025-05-18,survey,SAMPLE: Delivery was four days past the estimated arrival and I missed the event.,shipping
+T0194,2024-10-06,chat,SAMPLE: Can you resend the invoice for our records?,other
+T0051,2025-08-14,cx_ticket,"SAMPLE: Late for a housewarming — shipping said 3–5 days, we are on day 11.",shipping
+T0040,2025-08-18,social,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0020,2025-07-12,survey,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0177,2025-12-25,chat,"SAMPLE: Wholesale inquiry — we run a small shop, not a complaint.",other
+T0059,2024-04-15,cx_ticket,SAMPLE: Delivery was four days past the estimated arrival and I missed the event.,shipping
+T0129,2024-08-29,survey,SAMPLE: Corner stitching opened after two washes.,product
+T0017,2025-08-09,cx_ticket,SAMPLE: Backorder notice came after purchase; can you expedite fulfillment?,shipping
+T0038,2025-08-06,chat,SAMPLE: UPS says delayed; the blanket was supposed to arrive last Friday.,shipping
+T0076,2025-03-16,survey,SAMPLE: Backorder notice came after purchase; can you expedite fulfillment?,shipping
+T0123,2025-12-11,social,SAMPLE: Pilling on the edge after one week of use.,product
+T0159,2024-12-04,social,SAMPLE: TikTok advertisement promised a gift with purchase that did not apply.,ads
+T0172,2024-08-06,sms,"SAMPLE: Want to update the email on the account, nothing wrong with the order.",other
+T0128,2025-05-17,chat,SAMPLE: Pilling on the edge after one week of use.,product
+T0064,2025-06-14,chat,SAMPLE: Package marked delivered but nothing on the porch. Lost?,shipping
+T0025,2025-07-31,cx_ticket,SAMPLE: Backorder notice came after purchase; can you expedite fulfillment?,shipping
+T0014,2025-07-20,social,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0127,2024-03-22,survey,SAMPLE: Sizing is off — it is smaller than the dimensions listed.,product
+T0047,2025-07-11,social,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0023,2025-08-24,survey,SAMPLE: Carrier scan stopped after the warehouse; still waiting on the package.,shipping
+T0031,2025-07-28,social,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0173,2024-06-30,sms,SAMPLE: Please add a gift message before this ships.,other
+T0065,2024-04-04,survey,SAMPLE: Backorder notice came after purchase; can you expedite fulfillment?,shipping
+T0148,2024-04-17,survey,"SAMPLE: Saw the ad on Instagram, but the bundle was already gone.",ads
+T0011,2025-12-04,chat,"SAMPLE: Late for a housewarming — shipping said 3–5 days, we are on day 11.",shipping
+T0100,2024-09-10,chat,SAMPLE: Seam on the binding is tearing. Quality issue.,product
+T0175,2024-04-25,chat,SAMPLE: Need to change the ship-to address on an unfulfilled order.,other
+T0134,2025-10-16,survey,SAMPLE: Seam on the binding is tearing. Quality issue.,product
+T0143,2025-03-14,survey,SAMPLE: Clicked the ad from TikTok; landing page was a different colorway.,ads
+T0015,2025-08-16,chat,"SAMPLE: Late for a housewarming — shipping said 3–5 days, we are on day 11.",shipping
+T0081,2025-09-02,cx_ticket,SAMPLE: Order is in a fulfillment backlog and the ship date slipped twice.,shipping
+T0034,2025-07-07,sms,SAMPLE: UPS says delayed; the blanket was supposed to arrive last Friday.,shipping
+T0067,2024-03-20,cx_ticket,"SAMPLE: FedEx delivery exception, box has not shown up, ticket opened again.",shipping
+T0066,2024-10-31,social,SAMPLE: Carrier scan stopped after the warehouse; still waiting on the package.,shipping
+T0122,2025-11-24,cx_ticket,SAMPLE: Smell out of the bag has not gone away after airing out.,product
+T0113,2025-05-18,social,SAMPLE: Seam on the binding is tearing. Quality issue.,product
+T0083,2025-11-12,survey,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0084,2025-09-15,chat,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0186,2025-03-02,cx_ticket,"SAMPLE: Press request for a loft photoshoot, not an order issue.",other
+T0053,2025-08-07,social,SAMPLE: Tracking has not moved in six days; package still shows in transit.,shipping
+T0174,2025-11-23,chat,"SAMPLE: Press request for a loft photoshoot, not an order issue.",other
+T0183,2024-05-15,sms,"SAMPLE: Wholesale inquiry — we run a small shop, not a complaint.",other
+T0021,2025-08-02,chat,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0193,2025-04-27,social,SAMPLE: Please add a gift message before this ships.,other
+T0099,2024-12-25,cx_ticket,SAMPLE: Color is much lighter than the site; dye looks faded already.,product
+T0135,2025-11-01,cx_ticket,SAMPLE: Smell out of the bag has not gone away after airing out.,product
+T0150,2025-04-07,social,SAMPLE: Facebook advertisement showed a price that was not on the PDP.,ads
+T0151,2025-11-28,survey,SAMPLE: Discount code from the Meta ad returned invalid.,ads
+T0007,2024-11-29,survey,SAMPLE: UPS says delayed; the blanket was supposed to arrive last Friday.,shipping
+T0091,2025-11-25,cx_ticket,SAMPLE: Sheds lint on the couch; shedding started after the first wash.,product
+T0030,2025-08-03,cx_ticket,SAMPLE: Order is in a fulfillment backlog and the ship date slipped twice.,shipping
+T0022,2025-08-13,cx_ticket,"SAMPLE: FedEx delivery exception, box has not shown up, ticket opened again.",shipping
+T0063,2024-02-12,social,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0074,2024-12-21,social,SAMPLE: UPS says delayed; the blanket was supposed to arrive last Friday.,shipping
+T0191,2025-04-07,chat,"SAMPLE: Wholesale inquiry — we run a small shop, not a complaint.",other
+T0080,2024-09-28,sms,SAMPLE: Delivery was four days past the estimated arrival and I missed the event.,shipping
+T0130,2024-09-08,social,SAMPLE: Smell out of the bag has not gone away after airing out.,product
+T0039,2025-07-19,survey,SAMPLE: Backorder notice came after purchase; can you expedite fulfillment?,shipping
+T0199,2025-04-10,sms,SAMPLE: Please add a gift message before this ships.,other
+T0149,2024-04-09,survey,SAMPLE: Discount code from the Meta ad returned invalid.,ads
+T0157,2024-04-19,sms,"SAMPLE: Saw the ad on Instagram, but the bundle was already gone.",ads
+T0189,2024-06-18,cx_ticket,"SAMPLE: Wholesale inquiry — we run a small shop, not a complaint.",other
+T0070,2025-03-20,cx_ticket,"SAMPLE: FedEx delivery exception, box has not shown up, ticket opened again.",shipping
+T0103,2024-12-29,social,SAMPLE: Seam on the binding is tearing. Quality issue.,product
+T0115,2025-04-17,cx_ticket,"SAMPLE: Scratchy texture, not the soft hand-feel described.",product
+T0056,2025-08-03,chat,SAMPLE: Transit time doubled versus checkout. This is the second late order.,shipping
+T0140,2025-10-29,cx_ticket,SAMPLE: Corner stitching opened after two washes.,product
+T0180,2024-07-02,chat,SAMPLE: Password reset on the account is looping; cannot log in.,other
+T0010,2025-11-28,social,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0153,2025-11-20,cx_ticket,"SAMPLE: Saw the ad on Instagram, but the bundle was already gone.",ads
+T0161,2024-04-25,chat,SAMPLE: Facebook advertisement showed a price that was not on the PDP.,ads
+T0049,2025-07-19,chat,SAMPLE: Package marked delivered but nothing on the porch. Lost?,shipping
+T0158,2024-07-22,chat,SAMPLE: Facebook advertisement showed a price that was not on the PDP.,ads
+T0185,2024-03-04,chat,SAMPLE: Password reset on the account is looping; cannot log in.,other
+T0072,2024-12-26,social,SAMPLE: USPS tracking is blank. Is this still in the warehouse?,shipping
+T0132,2024-11-22,social,SAMPLE: Seam on the binding is tearing. Quality issue.,product
+T0126,2025-06-17,sms,SAMPLE: Sizing is off — it is smaller than the dimensions listed.,product
+T0092,2024-12-31,cx_ticket,SAMPLE: Sheds lint on the couch; shedding started after the first wash.,product
+T0196,2024-03-11,social,SAMPLE: Please add a gift message before this ships.,other
+T0119,2025-11-24,chat,SAMPLE: Smell out of the bag has not gone away after airing out.,product
+T0068,2025-08-22,social,SAMPLE: Delivery was four days past the estimated arrival and I missed the event.,shipping
+T0137,2024-06-09,sms,SAMPLE: Sizing is off — it is smaller than the dimensions listed.,product
+T0097,2024-06-08,chat,SAMPLE: Color is much lighter than the site; dye looks faded already.,product
