@@ -42,6 +42,10 @@ remotes::install_github("facebookincubator/GeoLift")
 
 Does **not** score the vignette’s baked-in Chicago/Portland 15-day campaign on `GeoTestData_Test`. Ground truth here is the +8% we inject.
 
+Does **not** pause Amazon on the Recast OLS CSV. That design lives in `../00-recast-r-memo/out/experiment.md`. This folder is the GeoLift **method** (known-lift recovery). Recast’s loop is priors → interpret → validate; the live validate would be a geo panel for the freeze channel, not this vignette.
+
+GitHub Actions CI covers `00-recast-r-memo` only. GeoLift is too heavy for the runner.
+
 ## Interview
 
 **Name one geo test:** markets from `out/markets.csv`, KPI = cash sales, result in `out/att.csv` and `out/CMO-brief.md`, what you cut in that brief (40% market, spillover, national TV, all-up Meta when the MMM splits ASC vs prospecting).

@@ -1,0 +1,9 @@
+# Recast path is R. Generated dumps and SAMPLE CSVs should not set Linguist to Python.
+**/*.png linguist-generated
+**/*.csv linguist-generated
+**/*.html linguist-generated
+02-robyn/out/Robyn_*/** linguist-generated
+03-meridian/out/** linguist-generated
+07-causalimpact/out/** linguist-generated
+.venv/** linguist-vendored
+03-meridian/.venv/** linguist-vendored

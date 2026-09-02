@@ -1,12 +1,8 @@
 # SAMPLE: marketing-measurement-proof
 
-Public SAMPLE for Marty Smithson. **Not** Black Clover. **Not** Nutricost. **Not** client data. Every chart title says SAMPLE.
+Public SAMPLE for [Marty Smithson](https://www.linkedin.com/in/marty-smithson). **Not** Black Clover. **Not** Nutricost. **Not** client data. Every chart title says SAMPLE.
 
-Clone and run. Do not treat this as a W-2 extract.
-
-## Recast first
-
-If you are Charlie / Jeff / Thomas: read **`00-recast-r-memo`** then **`01-geolift`**. Stop there.
+If you opened this from LinkedIn: Robyn, Meridian, and GeoLift on that profile are W-2 practice. This repo is the cloneable method on published data. It does not contain company extracts. Start at **`00-recast-r-memo`** then **`01-geolift`**. Stop there unless you asked for the MMM comparison.
 
 ```bash
 # R ≥ 4.3 (this SAMPLE was run on 4.6.1)
@@ -16,7 +12,9 @@ cd ../01-geolift && Rscript R/run_geolift.R     # GeoLift 2.7.5; target < 20 min
 
 **00 has run.** Outputs: `out/CMO-memo.md`, `priors.md`, `experiment.md`.
 
-**01 has run.** Milwaukee / Orlando / Saint Paul. Injected +8% cash sales. Recovered **+9.8%**, ATT 1192, p=0.034. 90% CI covers 8% and is wide. Three cities were summed into one cell because augsynth 0.2.0 crashes on N>1.
+**01 has run.** Milwaukee / Orlando / Saint Paul. Injected +8% cash sales. Recovered **+9.8%**, ATT 1192, p=0.034. 90% CI covers 8% and is wide. Three cities were summed into one cell because augsynth 0.2.0 crashes on N>1. That ATT is a **method check** on package data. It is not the Amazon pause designed in `00-recast-r-memo/out/experiment.md`.
+
+Cursor ran the libraries on this Mac. The CMO freeze/scale rules and `03-meridian/out/decision.md` pick are the work product.
 
 ## Status on the machine that published this (1 Sep 2026)
 
@@ -46,3 +44,5 @@ Meridian uses **`03-meridian/.venv`** (Python 3.11+). Robyn Nevergrad uses **Pyt
 - Not Recast’s ~30k-parameter product
 - Not a Black Clover or Nutricost lift
 - Not a reason to delay a Recast application
+
+GitHub may tag this repo Python because of Meridian / warehouse / EDA. Recast clone path is **R**: `00-recast-r-memo` and `01-geolift`. CI runs `00` on every push to that folder.

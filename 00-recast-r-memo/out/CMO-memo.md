@@ -8,7 +8,7 @@ Platform-reported conversions and cash sales do not match. Correlation is **0.86
 
 ## What we fit
 
-Train weeks 1–91, holdout 92–104. Shared geometric adstock θ = **0.5** by holdout RMSE on cash (**$5,383**; grid 0.3 / 0.5 / 0.7). Train R² = 0.941. Promo week adds $13,686 cash (95% CI $9,501 to $17,871). That is a dummy, not a media ROI. Paid channels do not get credit for BFCM-ish weeks. Baseline (intercept) is $78,843 per week.
+Train weeks 1–91, holdout 92–104. Shared geometric adstock θ = **0.5** by holdout RMSE on cash (**$5,383**; grid 0.3 / 0.5 / 0.7). Train R² = 0.941 — that recovers this SAMPLE DGP; a live Recast client will not look like this. Promo week adds $13,686 cash (95% CI $9,501 to $17,871). That is a dummy, not a media ROI. Paid channels do not get credit for BFCM-ish weeks. Baseline (intercept) is $78,843 per week.
 
 Spend mix on train: Google 37.3%, Meta 29.4%, TikTok 15.4%, Amazon 17.9%.
 
@@ -28,7 +28,7 @@ VIF: Google VIF 3.04; Meta VIF 2.08; TikTok VIF 1.34; Amazon VIF 3.17.
 
 **Hold — Google, TikTok.** Keep near the training mix (Google 37.3% / Meta 29.4% / TikTok 15.4% / Amazon 17.9%) until the Amazon geo test is back.
 
-**Do not scale — Amazon.** Widest interval ($1.51; $0.11 to $1.63). Point estimate $0.87 is not a license to scale. Geo design in experiment.md: KPI = cash sales; success = 95% CI on incremental cash excludes 0.
+**Do not scale — Amazon.** Widest interval ($1.51; $0.11 to $1.63). Point estimate $0.87 is not a license to scale. Geo *design* in experiment.md (Amazon pause on this CSV). Geo *method check* in `../01-geolift` (vignette cities, known +8%, 90% CI). They are not the same test.
 
 ## What we will not do until the geo test
 

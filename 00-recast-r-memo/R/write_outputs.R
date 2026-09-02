@@ -187,7 +187,7 @@ write_experiment <- function(path, plan, train, theta, glance_fit) {
       "**Training scale:** mean weekly %s spend %s; mean adstocked %s; OLS-implied mean weekly cash contribution %s (not a causal ATT).",
       ch, fmt_usd(mean_spend, 0), fmt_usd(mean_ads, 0), fmt_usd(mean_contrib, 0)
     ),
-    sprintf("**In-sample R² (train):** %s. This is not the success metric of the test.", format(round(glance_fit$r.squared, 3))),
+    sprintf("**In-sample R² (train):** %s. This is not the success metric of the test. It recovers this SAMPLE DGP; a live Recast client will not look like this.", format(round(glance_fit$r.squared, 3))),
     "",
     "## Hypothesis",
     "",
@@ -210,7 +210,11 @@ write_experiment <- function(path, plan, train, theta, glance_fit) {
     "",
     "**Excluded on purpose:** New York, Los Angeles, Chicago, Dallas (too large a share of national cash; one market must not be ~40% of sales). Do not treat a DMA and leave its adjacent DMA in the donor pool (spillover).",
     "",
-    "This list is a **design**. Power and market selection belong in the GeoLift package run (sibling folder), not here.",
+    "This list is a **design on the OLS SAMPLE weeks**, not a power run and not a GeoLift result. Do not type NYC. Do not treat a DMA and leave its commute-shed in the donor pool.",
+    "",
+    "## Sibling folder `01-geolift` (method, not this pause)",
+    "",
+    "The executed SAMPLE GeoLift is a **known-lift recovery** on facebookincubator package data: Milwaukee / Orlando / Saint Paul, injected +8% on cash sales (column Y), 90% CI (`alpha = 0.1`), collapsed to one cell because augsynth 0.2.0 cannot fit N>1. That ATT is **not** an Amazon pause on this CSV. Recast onboard would run `GeoLiftMarketSelection` on the client’s geo panel for this channel, then pause. Charlie: read this design, then read `../01-geolift/out/CMO-brief.md` for the method check.",
     "",
     "## Calendar",
     "",
@@ -222,7 +226,8 @@ write_experiment <- function(path, plan, train, theta, glance_fit) {
     "",
     "- **Primary KPI:** **cash sales** (settled dollars). Not ROAS, not platform-reported conversions, not blended MER as the test outcome.",
     "- **Guardrails:** % of treatment weeks with true $0 on the tested channel; no simultaneous sitewide promo that was not in the pre-period pattern; donor markets do not receive the leftover budget.",
-    "- **Success:** the **95% CI on incremental cash sales (ATT) excludes 0**.",
+    "- **Success (live desk):** the **95% CI on incremental cash sales (ATT) excludes 0**.",
+    "- **SAMPLE method check in `01-geolift`:** GeoLift default here is **90%** (`alpha = 0.1`). Do not quote that interval as a 95% test.",
     "- **Failure / freeze:** CI includes 0. We do **not** scale the channel from the OLS point estimate.",
     "- **If the CI excludes 0 but the ATT is far from the OLS contribution:** believe the geo test for *direction*; do not force the MMM coefficient to match a four-week ATT.",
     "",
@@ -235,7 +240,7 @@ write_experiment <- function(path, plan, train, theta, glance_fit) {
     "- Not a national holdout.",
     "- Not MTA.",
     "- Not Recast’s ~30k-parameter model.",
-    "- Not a GeoLift *result* — there is no ATT in this folder.",
+    "- Not a GeoLift *result* — there is no ATT in this folder. The ATT in `01-geolift` is a different dataset (package vignette, known +8% inject).",
     ""
   )
   writeLines(lines, path)
@@ -297,7 +302,7 @@ write_cmo_memo <- function(path, plan, tidy_fit, glance_fit, vif_tbl, diagnostic
 
   freeze <- plan$widest
   freeze_txt <- sprintf(
-    "**Do not scale — %s.** Widest interval (%s; %s to %s). Point estimate %s is not a license to scale. Geo design in experiment.md: KPI = cash sales; success = 95%% CI on incremental cash excludes 0.",
+    "**Do not scale — %s.** Widest interval (%s; %s to %s). Point estimate %s is not a license to scale. Geo *design* in experiment.md (Amazon pause on this CSV). Geo *method check* in `../01-geolift` (vignette cities, known +8%%, 90%% CI). They are not the same test.",
     freeze$channel,
     fmt_usd(freeze$ci_width),
     fmt_usd(freeze$conf.low),
@@ -338,7 +343,7 @@ write_cmo_memo <- function(path, plan, tidy_fit, glance_fit, vif_tbl, diagnostic
     "## What we fit",
     "",
     sprintf(
-      "Train weeks 1–91, holdout 92–104. Shared geometric adstock θ = **%s** by holdout RMSE on cash (**%s**; grid 0.3 / 0.5 / 0.7). Train R² = %.3f. %s %s",
+      "Train weeks 1–91, holdout 92–104. Shared geometric adstock θ = **%s** by holdout RMSE on cash (**%s**; grid 0.3 / 0.5 / 0.7). Train R² = %.3f — that recovers this SAMPLE DGP; a live Recast client will not look like this. %s %s",
       format(diagnostics$theta),
       fmt_usd(diagnostics$holdout_rmse, 0),
       glance_fit$r.squared,
