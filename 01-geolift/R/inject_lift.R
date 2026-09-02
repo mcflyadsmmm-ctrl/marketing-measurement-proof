@@ -40,3 +40,41 @@ split_market_string <- function(location_field) {
   locs <- trimws(unlist(strsplit(raw, ",", fixed = TRUE)))
   unique(tolower(locs[nzchar(locs)]))
 }
+
+# augsynth 0.2.0 treated_table() does t(df[trt_index, ]) and dies when
+# length(trt_index) > 1 (Yobs length = n_treated * T). GeoLift 2.7.5 still
+# calls summary(augsynth) before it colMeans the treated series. Collapse
+# the treatment cell to one unit so the fit can return ATT.
+collapse_treatment_cell <- function(data,
+                                    locations,
+                                    cell_name = "treatment_cell",
+                                    Y_id = "Y",
+                                    location_id = "location",
+                                    time_id = "time") {
+  locations <- unique(tolower(trimws(locations)))
+  loc <- tolower(as.character(data[[location_id]]))
+  treated <- data[loc %in% locations, , drop = FALSE]
+  donors <- data[!loc %in% locations, , drop = FALSE]
+  if (!nrow(treated)) {
+    stop("collapse_treatment_cell: no treated rows.")
+  }
+  agg <- stats::aggregate(
+    treated[[Y_id]],
+    by = list(time = treated[[time_id]]),
+    FUN = sum,
+    na.rm = TRUE
+  )
+  names(agg) <- c(time_id, Y_id)
+  cell <- agg
+  cell[[location_id]] <- cell_name
+  extra <- setdiff(names(data), c(time_id, Y_id, location_id))
+  for (col in extra) {
+    cell[[col]] <- if (is.numeric(data[[col]])) {
+      0
+    } else {
+      NA
+    }
+  }
+  cell <- cell[, names(data), drop = FALSE]
+  rbind(donors, cell)
+}

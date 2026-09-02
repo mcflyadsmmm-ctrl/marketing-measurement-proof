@@ -373,12 +373,27 @@ message(
   " rows, periods ", inject_start, "-", inject_end, "."
 )
 
-fit <- invoke(GeoLift, list(
+# Fit on a collapsed treatment cell. augsynth 0.2.0 + GeoLift summary()
+# cannot handle N>1 treated units (Yobs 270 vs time 90 on this panel).
+cell_name <- "treatment_cell"
+injected_cell <- collapse_treatment_cell(
+  injected,
+  treatment_locations,
+  cell_name = cell_name
+)
+fit_locations <- cell_name
+message(
+  "Fitting GeoLift on collapsed cell ", cell_name, " = ",
+  paste(treatment_locations, collapse = ", "),
+  " (augsynth 0.2.0 treated_table bug with N>1)."
+)
+
+gl_args <- list(
   Y_id = "Y",
   time_id = "time",
   location_id = "location",
-  data = injected,
-  locations = treatment_locations,
+  data = injected_cell,
+  locations = fit_locations,
   treatment_start_time = inject_start,
   treatment_end_time = inject_end,
   alpha = 0.1,
@@ -390,7 +405,15 @@ fit <- invoke(GeoLift, list(
   stat_test = "Total",
   conformal_type = "iid",
   ns = 1000
-))
+)
+fit <- tryCatch(
+  invoke(GeoLift, gl_args),
+  error = function(e) {
+    message("GeoLift with CI failed: ", conditionMessage(e), " — retry without CI.")
+    gl_args$ConfidenceIntervals <- FALSE
+    invoke(GeoLift, gl_args)
+  }
+)
 
 att <- as.numeric(fit$inference$ATT[1])
 pct <- as.numeric(fit$inference$Perc.Lift[1])
@@ -581,7 +604,8 @@ cmo <- paste0(
   "; p = ", signif(pval, 3),
   "; 90% CI (incremental) = (", round(ci_lo_inc, 1), ", ", round(ci_hi_inc, 1), ").\n",
   "- **CI covers 8%?** ", if (ci_covers_8) "yes" else "no", ". ", miss_8_line, "\n",
-  "- **API:** ", api_note, ".\n\n",
+  "- **API:** ", api_note, ".\n",
+  "- **Fit note:** The treatment cities were **summed into one cell** before `GeoLift()`. augsynth 0.2.0 `treated_table()` errors when more than one treated unit is passed (`Yobs` length n_treated × T). The markets above are still the cell. Charlie can reproduce the crash with N>1 and this workaround.\n\n",
   "## Design vs 5% MDE\n\n",
   design_note, "\n\n",
   "Pre-period fit: scaled L2 imbalance ",

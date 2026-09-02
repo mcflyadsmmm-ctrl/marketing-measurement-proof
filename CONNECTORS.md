@@ -1,72 +1,82 @@
-# Connectors Marty has to click
+# Connectors — what is on this Mac (1 Sep 2026, evening)
 
-Cursor cannot finish Recast or GeoLift without **R**. Cursor cannot put a public URL on LinkedIn without **you naming the GitHub account**. Nothing here needs Shopify, ads accounts, or Black Clover.
+Nothing here needs Shopify, ads accounts, or Black Clover. Public SAMPLE only.
 
-## Blocking tonight (Recast is apply-this-week)
+## Landed tonight
 
-### 1. R 4.6.1 for Apple Silicon
+| Stack | What | Where |
+|---|---|---|
+| **R 4.6.1** arm64 | Recast OLS memo already ran | `/usr/local/bin/Rscript` |
+| **GeoLift 2.7.5** + augsynth 0.2.0 | Recast / Haus geo | R library. `augsynth` is GitHub-only (not CRAN). |
+| **Robyn 3.12.1** + Nevergrad 1.0.12 | Mozilla / Lovevery MMM | R + `~/.virtualenvs/r-reticulate` on **Apple Python 3.9.6** |
+| **google-meridian 1.8.0** | Mozilla / Lovevery MMM | `03-meridian/.venv` on **python.org 3.11.9** |
+| **CausalImpact 1.4.1** | Mozilla named library | Came in with GeoLift deps |
+| **GitHub** | Public SAMPLE | [`mcflyadsmmm-ctrl/marketing-measurement-proof`](https://github.com/mcflyadsmmm-ctrl/marketing-measurement-proof) via `gh` |
 
-This Mac is **M4 / arm64**. There is **no Homebrew and no R**. Recast’s JD is R pipelines + a 1–2 day take-home. Project 0 is written in R on purpose.
+## Two Pythons — do not mix
 
-1. Download [R-4.6.1-arm64.pkg](https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.6.1-arm64.pkg) from [CRAN macOS](https://cran.r-project.org/bin/macosx/).
-2. Run the Apple installer (admin password). Custom install may omit Tcl/Tk and Texinfo.
-3. Quit and reopen the terminal (or Cursor) so `Rscript` is on `PATH`.
-4. Tell Cursor: **R is installed**. Then `Rscript 00-recast-r-memo/R/run.R` is the next command.
+[Robyn’s Nevergrad guide](https://github.com/facebookexperimental/Robyn/blob/main/demo/install_nevergrad.R) warns **Python 3.10+ may break Nevergrad**. [Google’s Meridian install](https://developers.google.com/meridian/docs/user-guide/installing) requires **3.11 or 3.12**.
 
-Until that pkg runs, Project 0 is source-complete and **not executed**.
+| Binary | Version | Use for |
+|---|---|---|
+| `/usr/bin/python3` | Apple **3.9.6** | Robyn Nevergrad only (`r-reticulate`) |
+| `/usr/local/bin/python3.11` | python.org **3.11.9** | Meridian venv only |
+| `python3` on PATH after tonight | likely **3.11.9** | Do not recreate the warehouse `.venv` with this |
 
-### 2. Which GitHub account is public-proof?
+Warehouse / Hightouch / Lola stay on the repo `.venv` (created under 3.9). Leave it.
 
-`gh` is already logged in as **`mcflyadsmmm-ctrl`**. The packet identity is **Marty Smithson** (`linkedin.com/in/marty-smithson`). A McFly-branded GitHub on the Featured section fights the W-2 story.
-
-Reply with one of:
-
-- `mcflyadsmmm-ctrl` (ship now, McFly org in the URL), or
-- a personal GitHub user you want `gh` switched to, then `gh repo create marketing-measurement-proof --public`.
-
-Do not push until Project 0 has a green `Rscript` run (or you explicitly say push the source anyway).
-
-### 3. GitHub MCP in Cursor (optional)
-
-The GitHub plugin is in an error/auth state. `gh` already works. Only auth the MCP if you want PRs from chat. Not required to build.
-
-## This machine (Cursor can do; no login)
-
-Python **3.9.6**. Venv: `.venv/` in this repo.
+## Run (after install)
 
 ```bash
-.venv/bin/pip install -r requirements.txt
+cd "08 Proof/marketing-measurement-proof"
+
+# Recast-week — do this first. Target < 20 min.
+cd 01-geolift && Rscript R/run_geolift.R
+
+# Robyn (timeboxed Nevergrad). Force 3.9.
+export RETICULATE_PYTHON="$HOME/.virtualenvs/r-reticulate/bin/python"
+cd ../02-robyn && Rscript R/run_robyn.R
+
+# Meridian (timeboxed MCMC). Force 3.11 venv.
+cd ../03-meridian && .venv/bin/python python/run_meridian.py
 ```
 
-Need: `polars`, `duckdb`, `dbt-core<1.8`, `dbt-duckdb<1.8`, `pandas`, `numpy`, `matplotlib`, `statsmodels`. Jupyter optional.
+If Recast books a screen, **stop after GeoLift and apply**. Robyn/Meridian are not a reason to sit on Greenhouse.
 
-## Later (Lola pulse only — not Recast)
+## Re-install (only if a machine is wiped)
 
-| Connector | Why | When |
-|---|---|---|
-| **Tableau Public** account | Lola JD names Looker/Tableau, not Studio. Public workbook on SAMPLE CSV. | After warehouse seeds exist |
-| **Looker trial** (Looker, not Looker Studio) | Same JD. One screenshot labeled Looker. | If you would rather show Looker than Tableau |
-| Google Cloud / BigQuery sandbox | Optional second target for `google_analytics_sample`. DuckDB is enough to clone. | Only if a JD asks to see BQ |
-
-## Never connect (would leak W-2 or look like a buyer seat)
-
-- Shopify admin, Klaviyo, Meta Ads, Google Ads, Amazon Ads, TikTok Ads
-- Snowflake / NetSuite / Black Clover / Nutricost extracts
-- Recast / Haus / Meridian customer tenants
-- Any file with live revenue
-
-Public SAMPLE generators only.
-
-## After R is installed — R packages (no extra accounts)
+**GeoLift** — `augsynth` is not on CRAN:
 
 ```r
-install.packages(c("tidyverse", "lubridate", "broom", "remotes"), repos = "https://cloud.r-project.org")
-# GeoLift:
-install.packages("augsynth")  # if CRAN still has it; else follow GeoLift README
+install.packages("remotes", repos = "https://cloud.r-project.org")
+remotes::install_github("ebenmichael/augsynth")
 remotes::install_github("facebookincubator/GeoLift")
-# Robyn: follow facebookexperimental/Robyn README (nevergrad + extra deps)
-# CausalImpact:
-install.packages("CausalImpact")
 ```
 
-Robyn and Meridian are **days 11–22**. Do not block Recast on them.
+**Robyn** — CRAN binary + Nevergrad on 3.9:
+
+```bash
+/usr/bin/python3 -m venv ~/.virtualenvs/r-reticulate
+~/.virtualenvs/r-reticulate/bin/pip install "numpy==1.26.4" nevergrad
+```
+
+```r
+install.packages("Robyn")
+```
+
+**Meridian** — python.org 3.11 pkg, then:
+
+```bash
+/usr/local/bin/python3.11 -m venv 03-meridian/.venv
+03-meridian/.venv/bin/pip install "google-meridian>=1.7.0,<2"
+```
+
+Python 3.11 pkg (already in Downloads if you need it again): [python-3.11.9-macos11.pkg](https://www.python.org/ftp/python/3.11.9/python-3.11.9-macos11.pkg)
+
+## Later (Lola pulse only)
+
+Tableau Public or Looker trial — screenshot labeled Looker/Tableau, not Studio. Pulse CSV already exists without it.
+
+## Never connect
+
+Shopify, Klaviyo, Meta/Google/Amazon/TikTok ads, Snowflake, NetSuite, Black Clover, Nutricost, Recast/Haus/Meridian customer tenants, any live revenue file.

@@ -2,7 +2,7 @@
 
 Public SAMPLE only. Meta Robyn `dt_simulated_weekly` and Google Meridian `national_media` are **different simulated worlds**. They are not McFly client runs. They are not Black Clover or Nutricost. No ROI from those desks belongs here.
 
-**Status on this Mac (1 Sep 2026):** R is not installed, so Robyn has not produced an Allocator. System Python is 3.9.6; Meridian requires **Python 3.11+**, so the posterior has not been sampled. There are **no** current-vs-recommended dollars to compare. This memo is the decision rule that still holds when both libraries finish and disagree.
+**Status (1 Sep 2026 evening):** R 4.6.1, Robyn 3.12.1, Nevergrad 1.0.12 (Python 3.9 `r-reticulate`), and google-meridian 1.8.0 (Python 3.11 `03-meridian/.venv`) are **installed**. Allocator and Meridian MCMC have **not** been run. There are **no** current-vs-recommended dollars to compare. This memo is the decision rule that still holds when both libraries finish and disagree. Do not invent those dollars.
 
 ---
 

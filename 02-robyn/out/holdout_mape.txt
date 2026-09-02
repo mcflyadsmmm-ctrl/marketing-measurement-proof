@@ -1,2 +1,7 @@
-SAMPLE: holdout MAPE not computed yet.
-Robyn has not finished a model on this machine (R / Robyn / nevergrad missing). No MAPE number is reported.
+SAMPLE: Robyn holdout MAPE — last 10 weeks of dt_simulated_weekly demo window.
+Train window_end: 2018-10-22 (holdout 10 weeks not in robyn_inputs window).
+Holdout dates: 2018-10-29 to 2018-12-31.
+Selected solID: 1_174_1.
+Nevergrad: 200 iterations x 1 trial (laptop). Production demo.R: 2000 x 5.
+MAPE: 0.1306 (13.06%).
+Holdout MAPE on last 10 weeks using frozen Nevergrad hyps + ridge coefs. Adstock/Hill run on the full SAMPLE window so carryover into holdout is kept; Prophet seasonal terms are omitted. Not an Allocator dollar.

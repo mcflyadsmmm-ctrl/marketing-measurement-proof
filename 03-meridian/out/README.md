@@ -1,6 +1,6 @@
 # SAMPLE: Meridian not run
 
-SAMPLE not run. Google Meridian requires Python 3.11+ (docs: 3.11 or 3.12). This interpreter is 3.9.6. Create the env in environment.yml, then rerun. https://github.com/google/meridian
+SAMPLE not run. Data load or MCMC failed (URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>). No posterior artifacts.
 
 No posterior contribution, saturation, or budget reallocation numbers were written. Do not invent optimizer dollars.
 

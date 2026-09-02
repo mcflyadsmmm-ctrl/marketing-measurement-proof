@@ -9,7 +9,7 @@ Repo moved: `facebookexperimental/GeoLift` → [`facebookincubator/GeoLift`](htt
 R **4.6.1** is on this Mac. `Rscript R/run_geolift.R` still needs the GeoLift package (see install below):
 
 ```bash
-cd "08 Proof/marketing-measurement-proof/01-geolift"
+cd 01-geolift
 Rscript R/run_geolift.R
 ```
 

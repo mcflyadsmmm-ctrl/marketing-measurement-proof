@@ -1,28 +1,35 @@
 SAMPLE: CMO brief — scale / cut / rerun
 
-Not client data. Not Black Clover. facebookincubator/GeoLift vignette panel. KPI language is **cash sales** even though the package column is `Y`.
-
-`Rscript R/run_geolift.R` overwrites this file with ATT, CI, and p from the +8% inject. Until R exists on this Mac, numbers below are the decision rule, not a recovered lift.
+Not client data. Not Black Clover. facebookincubator/GeoLift 2.7.5 vignette panel. KPI is **cash sales** (package column Y). Runtime 0.22 minutes.
 
 ## One geo test (interview)
 
-- **Markets:** treatment cities from `GeoLiftMarketSelection()` on `GeoTestData_PreTest` (40 US cities shipped in the package). Names come from that object after R runs — see `out/markets.csv`. This SAMPLE does not invent DMAs.
-- **KPI:** cash sales (package `Y`).
-- **Design target:** 5% MDE at about 80% power, small grid (`N = 2,3`, four treatment periods first). If four periods cannot see 5% at 80%, the script says so and writes the implied duration / unit budget from the ranking table.
-- **Result protocol:** copy the series, inject **+8%** in treatment for a **4-period** window, fit `GeoLift()`. Read ATT, 90% CI, p from `out/att.csv`.
-- **If the CI misses 8%:** say so. That is the point of a known-lift SAMPLE. Do not round it to a story.
+- **Markets (treatment):** milwaukee, orlando, saint paul
+- **Control:** 37 remaining complete cities in GeoTestData_PreTest (Honolulu held in the control pool, not treatment — package walkthrough).
+- **KPI:** cash sales.
+- **Window:** periods 87–90 (4 periods) on a copy of the pre-test series.
+- **Injected truth:** +8%.
+- **Result:** ATT = 1191.761; percent lift = 9.8%; incremental cash sales = 4767; p = 0.034; 90% CI (incremental) = (881.9, 9061.2).
+- **CI covers 8%?** yes. 90% CI covers the injected +8%. Recovered range is wide or tight depending on power — still read p and cash MER before scaling.
+- **API:** GeoLiftMarketSelection.
+- **Fit note:** The treatment cities were **summed into one cell** before `GeoLift()`. augsynth 0.2.0 `treated_table()` errors when more than one treated unit is passed (`Yobs` length n_treated × T). The markets above are still the cell. Charlie can reproduce the crash with N>1 and this workaround.
+
+## Design vs 5% MDE
+
+Rank-1 (after 40% sales filter) can detect a 5% MDE at power 1.00 in 4 periods.
+
+Pre-period fit: scaled L2 imbalance 0.353; test vs rest-of-panel correlation 0.975; treatment share of cash sales 6.2%.
 
 ## What I would cut
 
-- A market that is ~40% of cash sales — synthetic control then copies the treated series. The script skips that rank when `ProportionTotal_Y > 0.40`.
-- Overlapping media: treatment geos that still see the tactic (national social, commuting spillover). SAMPLE data cannot show the buy; I would refuse it on a live desk.
-- National TV and always-on brand I will not actually pause. GeoLift does not identify them. See `out/identification.md`.
-- “Meta all-up” if the MMM splits ASC vs prospecting. See `out/mmm-first-vs-geolift-first.md`.
+- A market that is ~40% of cash sales. This rank is under that cap.
+- Overlapping media: treatment geos that still see the tactic. SAMPLE data cannot show the buy; I would refuse it on a live desk.
+- National TV and always-on brand I will not pause. GeoLift does not identify them.
+- Meta all-up if the MMM splits ASC vs prospecting. An all-up ATT cannot anchor either curve.
 
 ## Scale / cut / rerun
 
-- **Scale** only if p is under the 0.10 GeoLift default **and** the incremental CI is above zero **and** cash MER on the implied incremental still clears. An ATT that recovers +8% inside the CI is evidence to scale that **geo-assignable cell**, not a license to raise every platform.
-- **Cut** if p is weak, the CI includes zero, or the recovered lift is not worth the holdout. Do not scale platform ROAS that disagrees with this ATT.
-- **Rerun** if the design never had 80% power at 5% MDE, or if the CI misses the injected 8%. Lengthen the window or add spend. Do not stuff a four-day noisy ATT into an MMM as “validation.”
+SCALE the geo-assignable cell if cash MER on the incremental still clears. Do not raise every platform off this ATT.
 
-Haus vs Recast sequencing lives in `out/mmm-first-vs-geolift-first.md`. Short version: experiment results **anchor** the response curve. Recast “validate the model” is the opposite order.
+Haus vs Recast: experiment results **anchor** the response curve. Recast “validate the model” is the opposite order. See `out/mmm-first-vs-geolift-first.md`.
+

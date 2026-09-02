@@ -102,10 +102,19 @@ if (!requireNamespace("Robyn", quietly = TRUE)) {
 
 library(Robyn)
 
+# python.org 3.11 is now first on PATH. Nevergrad lives on Apple 3.9.
+ng_python <- path.expand("~/.virtualenvs/r-reticulate/bin/python")
+if (file.exists(ng_python)) {
+  Sys.setenv(RETICULATE_PYTHON = ng_python)
+}
+
 ng_ok <- FALSE
 try(
   {
     if (requireNamespace("reticulate", quietly = TRUE)) {
+      if (file.exists(ng_python)) {
+        reticulate::use_virtualenv("r-reticulate", required = TRUE)
+      }
       ng_ok <- isTRUE(reticulate::py_module_available("nevergrad"))
     }
   },

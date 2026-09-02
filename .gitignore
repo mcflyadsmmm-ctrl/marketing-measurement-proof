@@ -1,4 +1,8 @@
 .venv/
+**/install-*.log
+**/run-*.log
+02-robyn/Rplots.pdf
+02-robyn/out1_*.png
 __pycache__/
 *.pyc
 .Rhistory

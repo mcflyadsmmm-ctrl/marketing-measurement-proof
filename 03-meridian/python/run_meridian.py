@@ -86,6 +86,9 @@ def xr_to_csv(ds, path: Path) -> bool:
 
 
 def load_national_paid_media(pd, meridian_mod):
+    vendored = ROOT / "data" / "national_media.csv"
+    if vendored.is_file():
+        return pd.read_csv(vendored)
     pkg_csv = (
         Path(meridian_mod.__file__).resolve().parent
         / "data"
