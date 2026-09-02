@@ -21,7 +21,7 @@ find_root <- function() {
 root <- find_root()
 setwd(root)
 
-needed <- c("tidyverse", "lubridate", "broom")
+needed <- c("dplyr", "readr", "ggplot2", "broom", "lubridate", "tibble", "tidyr")
 installed <- rownames(utils::installed.packages())
 missing <- needed[!needed %in% installed]
 if (length(missing) > 0L) {
@@ -30,9 +30,13 @@ if (length(missing) > 0L) {
 }
 
 suppressPackageStartupMessages({
-  library(tidyverse)
-  library(lubridate)
+  library(dplyr)
+  library(readr)
+  library(ggplot2)
   library(broom)
+  library(lubridate)
+  library(tibble)
+  library(tidyr)
 })
 
 source(file.path(root, "R", "adstock.R"))

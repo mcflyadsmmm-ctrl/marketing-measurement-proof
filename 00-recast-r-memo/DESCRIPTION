@@ -6,11 +6,11 @@ Description: Public SAMPLE OLS plus geometric adstock. Not client data.
 License: MIT
 Imports:
     broom,
+    dplyr,
     ggplot2,
     lubridate,
     readr,
     tibble,
-    dplyr,
     tidyr
 Encoding: UTF-8
 Language: en-US

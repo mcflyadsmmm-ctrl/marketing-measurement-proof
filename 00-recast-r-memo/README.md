@@ -11,7 +11,7 @@ Answers the [Marketing Data Scientist posting](https://job-boards.greenhouse.io/
 R **4.6.1** is installed on this Mac. From this folder:
 
 ```r
-install.packages(c("tidyverse", "lubridate", "broom"), repos = "https://cloud.r-project.org")
+install.packages(c("dplyr", "readr", "ggplot2", "broom", "lubridate", "tibble", "tidyr"), repos = "https://cloud.r-project.org")
 ```
 
 `R/run.R` installs those three from `https://cloud.r-project.org` if they are missing.
@@ -21,7 +21,7 @@ cd 00-recast-r-memo
 Rscript R/run.R
 ```
 
-**Runtime:** first tidyverse install 3–10 minutes; after that **under 30 seconds** (OLS on 91 weeks). Optional `brms` is not used.
+**Runtime:** first package install a few minutes; after that **under 30 seconds** (OLS on 91 weeks). Optional `brms` is not used. Does not require the full tidyverse meta-package.
 
 **Outputs:** `out/CMO-memo.md` (≤ 800 words, numbers from `broom::tidy`), `out/priors.md`, `out/experiment.md`, PNGs titled `SAMPLE: ...`, plus `out/tidy.csv`, `out/vif.csv`, `out/theta_grid.csv`.
 

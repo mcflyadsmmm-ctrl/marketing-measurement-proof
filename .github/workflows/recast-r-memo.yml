@@ -25,7 +25,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           working-directory: 00-recast-r-memo
-          extra-packages: any::tidyverse, any::broom, any::lubridate
+          extra-packages: any::dplyr, any::readr, any::ggplot2, any::broom, any::lubridate, any::tibble, any::tidyr
           needs: check
       - name: Rscript R/run.R
         run: Rscript R/run.R
